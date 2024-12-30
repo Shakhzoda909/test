@@ -47,21 +47,21 @@ let names = [
 
 
 
-// for (const item of names) {
-//   console.log(item.name)
-//   if(item.age > 40 ) {
-//     break
-//   }
-//   console.log(item.is_married)
-// }
+for (const item of names) {
+  console.log(item.name)
+  if(item.age > 40 ) {
+    break
+  }
+  console.log(item.is_married)
+}
 
-// for(let i = 0; i < names.length; i++) {
-//   console.log(names[i].name)
-//   if(names[i].age > 40){
-//     continue
-//   }
-//   console.log(names[i].is_married)
-// }
+for(let i = 0; i < names.length; i++) {
+  console.log(names[i].name)
+  if(names[i].age > 40){
+    continue
+  }
+  console.log(names[i].is_married)
+}
 
 //SORTING 
 
