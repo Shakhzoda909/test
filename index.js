@@ -95,97 +95,78 @@ function bubbleSort(arr) {
 }
 
 let arr = [5, 3, 8, 4, 2];
-// console.log("Sorted array:", bubbleSort(arr)); // Output: [2, 3, 4, 5, 8]
 
 arr.sort((a, b) => a - b)
 
-
-
-// const person1 = {
-//   name: 'John',
-//   surname: 'Doe',
-//   getName() {
-//     console.log(this.name + ' ' + this.surname)
-//   }
-// }
-
-// const person2 = {
-//   name: 'Ali',
-//   surname: 'Vali',
-//   getName() {
-//     console.log(this.name + ' '+ this.surname)
-//   }
-// }
-
 //FACTORY FUNCTION
-// function personFunction(name, surname){
-//   return {
-//     name,
-//     surname,
-//     getName() {
-//       console.log(this.name + ' ' + this.surname)
-//     }
-//   }
-// }
+function personFunction(name, surname){
+  return {
+    name,
+    surname,
+    getName() {
+      console.log(this.name + ' ' + this.surname)
+    }
+  }
+}
 
-// const myFunction = (name, ...rest) => {
-//   console.log(name)
-// }
+const myFunction = (name, ...rest) => {
+  console.log(name)
+}
 
-// function fetchData(callback) {
-//   setTimeout(() => {
-//     callback("Data fetched!");
-//   }, 3000);
-// }
+function fetchData(callback) {
+  setTimeout(() => {
+    callback("Data fetched!");
+  }, 3000);
+}
 
-// fetchData(
-//   (message) => {
-//     console.log(message); // Outputs: Data fetched! after 2 seconds
-//   }
-// );
+fetchData(
+  (message) => {
+    console.log(message); // Outputs: Data fetched! after 2 seconds
+  }
+);
 
-// function fetchData() {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       const success = age > 20; // Simulating success or failure
-//       if (success) {
-//         resolve("Data fetched!");
-//       } else {
-//         reject("Error fetching data");
-//       }
-//     }, 2000);
-//   });
-// }
+function fetchData() {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      const success = age > 20; // Simulating success or failure
+      if (success) {
+        resolve("Data fetched!");
+      } else {
+        reject("Error fetching data");
+      }
+    }, 2000);
+  });
+}
 
-// fetchData()
-//   .then((message) => {
-//     console.log(message); // Outputs: Data fetched! after 2 seconds
-//   })
-//   .catch((error) => {
-//     console.log(error);
-//   });
+fetchData()
+  .then((message) => {
+    console.log(message); // Outputs: Data fetched! after 2 seconds
+  })
+  .catch((error) => {
+    console.log(error);
+  });
 
-// async function fetchData() {
-//   try{
-//     const result = await new Promise((resolve, reject) => {
-//       setTimeout(() => {
-//         const success = false; // Simulating success or failure
-//         if (success) {
-//           resolve("Data fetched!");
-//         } else {
-//           reject("Error fetching data");
-//         }
-//       }, 2000);
-//     });
+async function fetchData() {
+  try{
+    const result = await new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const success = false; // Simulating success or failure
+        if (success) {
+          resolve("Data fetched!");
+        } else {
+          reject("Error fetching data");
+        }
+      }, 2000);
+    });
   
-//     console.log(result); 
-//   } catch(error) {
-//     console.log(error)
-//   }
+    console.log(result); 
+  } catch(error) {
+    console.log(error)
+  }
 
-// }
+}
 
-// fetchData()
+fetchData()
 
 // Simulating an API call using async/await
 // Async function to fetch user data from the API
@@ -202,8 +183,6 @@ async function fetchUserProfile(userId) {
     // Parse the JSON data from the response
     const user = await response.json();
 
-    // Display the fetched user data
-    console.log('User Profile:', user);
   } catch (error) {
     // Catch any errors that occur during the fetch or parsing
     console.error('Error fetching user profile:', error.message);
@@ -212,6 +191,3 @@ async function fetchUserProfile(userId) {
 
 // Calling the function with a valid user ID
 fetchUserProfile(1);  // This will fetch and display the user profile
-
-// Calling the function with an invalid user ID to simulate an error
-fetchUserProfile(999);  // This will throw an error and trigger the catch block
